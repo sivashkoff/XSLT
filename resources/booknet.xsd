@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="booknet" type="booknetType"/>
+  <xs:complexType name="shopsType">
+    <xs:sequence>
+      <xs:element type="shopType" name="shop" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="booknetType">
+    <xs:sequence>
+      <xs:element type="shopsType" name="shops"/>
+      <xs:element type="booksType" name="books"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="shopType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Midland
+            "/>
+            <xs:enumeration value="
+                Oz
+            "/>
+            <xs:enumeration value="
+                Bookinist
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="address">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Gomel, Rechitsa Highway, 7
+            "/>
+            <xs:enumeration value="
+                Gomel, Lenin St, 85
+            "/>
+            <xs:enumeration value="
+                Gomel, Soviet St, 5
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="online" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Lord of Ring
+            "/>
+            <xs:enumeration value="
+                My family and other animals
+            "/>
+            <xs:enumeration value="
+                Java 8
+            "/>
+            <xs:enumeration value="
+                Art of programming
+            "/>
+            <xs:enumeration value="
+                SQL requests by example
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="author">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                Tolkien J.
+            "/>
+            <xs:enumeration value="
+                Durrel J.
+            "/>
+            <xs:enumeration value="
+                Blinov I.
+            "/>
+            <xs:enumeration value="
+                Knut D.
+            "/>
+            <xs:enumeration value="
+                Kulikov S.
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="
+                2015
+            "/>
+            <xs:enumeration value="
+                2019
+            "/>
+            <xs:enumeration value="
+                1984
+            "/>
+            <xs:enumeration value="
+                2020
+            "/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="e-copy" use="optional"/>
+    <xs:attribute type="xs:string" name="shop-id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="booksType">
+    <xs:sequence>
+      <xs:element type="bookType" name="book" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
