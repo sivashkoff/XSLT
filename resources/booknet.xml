@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE booknet>
+<booknet>
+    <shops>
+        <shop id="1" online="yes">
+            <name>
+                Midland
+            </name>
+            <address>
+                Gomel, Rechitsa Highway, 7
+            </address>
+        </shop>
+        <shop id="2" online="yes">
+            <name>
+                Oz
+            </name>
+            <address>
+                Gomel, Lenin St, 85
+            </address>
+        </shop>
+        <shop id="3" online="no">
+            <name>
+                Bookinist
+            </name>
+            <address>
+                Gomel, Soviet St, 5
+            </address>
+        </shop>
+    </shops>
+    <books>
+        <book e-copy="yes" shop-id="1">
+            <name>
+                Lord of Ring
+            </name>
+            <author>
+                Tolkien J.
+            </author>
+            <year>
+                2015
+            </year>
+        </book>
+        <book e-copy="yes" shop-id="1, 2">
+            <name>
+                My family and other animals
+            </name>
+            <author>
+                Durrel J.
+            </author>
+            <year>
+                2019
+            </year>
+        </book>
+        <book e-copy="yes" shop-id="3">
+            <name>
+                Java 8
+            </name>
+            <author>
+                Blinov I.
+            </author>
+            <year>
+                2015
+            </year>
+        </book>
+        <book e-copy="no" shop-id="3">
+            <name>
+                Art of programming
+            </name>
+            <author>
+                Knut D.
+            </author>
+            <year>
+                1984
+            </year>
+        </book>
+        <book e-copy="yes" shop-id="">
+            <name>
+                SQL requests by example
+            </name>
+            <author>
+                Kulikov S.
+            </author>
+            <year>
+                2020
+            </year>
+        </book>
+    </books>
+</booknet>
